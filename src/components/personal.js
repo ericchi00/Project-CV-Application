@@ -7,7 +7,7 @@ class Personal extends React.Component {
 
 	render() {
 		return (
-			<fieldset>
+			<div className="personal">
 				<legend>Personal Information</legend>
 				<label htmlFor="name"></label>
 				<input type="text" id="name" placeholder="Full Name" />
@@ -15,7 +15,7 @@ class Personal extends React.Component {
 				<input type="tel" id="phone" placeholder="Phone Number" />
 				<label htmlFor="email"></label>
 				<input type="email" id="last" placeholder="Email" />
-			</fieldset>
+			</div>
 		);
 	}
 }
