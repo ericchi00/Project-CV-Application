@@ -13,7 +13,9 @@ class App extends React.Component {
 			educationCount: 0,
 		};
 		this.addWork = this.addWork.bind(this);
+		this.deleteWork = this.deleteWork.bind(this);
 		this.addEducation = this.addEducation.bind(this);
+		this.deleteEducation = this.deleteEducation.bind(this);
 	}
 
 	addWork() {
@@ -23,11 +25,23 @@ class App extends React.Component {
 		});
 	}
 
+	deleteWork(id) {
+		this.setState((prevState) => ({
+			work: prevState.work.filter((index) => index !== id),
+		}));
+	}
+
 	addEducation() {
 		this.setState({
 			educationCount: this.state.educationCount + 1,
 			education: this.state.education.concat(this.state.educationCount),
 		});
+	}
+
+	deleteEducation(id) {
+		this.setState((prevState) => ({
+			education: prevState.education.filter((index) => index !== id),
+		}));
 	}
 
 	render() {
@@ -50,8 +64,8 @@ class App extends React.Component {
 								<label htmlFor="workEnd"></label>
 								<input type="text" id="workEnd" placeholder="End Date" />
 							</li>
-							<Work work={this.state.work} />
-							<button type="button" onClick={this.addWork}>
+							<Work work={this.state.work} deleteWork={this.deleteWork} />
+							<button className="addWork" type="button" onClick={this.addWork}>
 								Add Work
 							</button>
 						</ul>
@@ -71,8 +85,15 @@ class App extends React.Component {
 								<label htmlFor="schoolEnd"></label>
 								<input type="text" id="schoolEnd" placeholder="End Date" />
 							</li>
-							<Education education={this.state.education} />
-							<button type="button" onClick={this.addEducation}>
+							<Education
+								education={this.state.education}
+								deleteEducation={this.deleteEducation}
+							/>
+							<button
+								className="addSchool"
+								type="button"
+								onClick={this.addEducation}
+							>
 								Add School
 							</button>
 						</ul>
