@@ -13,6 +13,7 @@ class App extends React.Component {
 			educationCount: 0,
 		};
 		this.addWork = this.addWork.bind(this);
+		this.addEducation = this.addEducation.bind(this);
 	}
 
 	addWork() {
@@ -56,20 +57,25 @@ class App extends React.Component {
 						</ul>
 					</fieldset>
 					<fieldset>
-						<div className="school">
-							<legend>Education</legend>
-							<label htmlFor="school"></label>
-							<input type="text" id="school" placeholder="University" />
-							<label htmlFor="degree"></label>
-							<input type="text" id="degree" placeholder="Degree" />
-							<label htmlFor="schoolStart"></label>
-							<input type="text" id="study" placeholder="School of Study" />
-							<label htmlFor="study"></label>
-							<input type="text" id="schoolStart" placeholder="Start Date" />
-							<label htmlFor="schoolEnd"></label>
-							<input type="text" id="schoolEnd" placeholder="End Date" />
-							<button type="button">Add School</button>
-						</div>
+						<ul>
+							<li>
+								<legend>Education</legend>
+								<label htmlFor="school"></label>
+								<input type="text" id="school" placeholder="University" />
+								<label htmlFor="degree"></label>
+								<input type="text" id="degree" placeholder="Degree" />
+								<label htmlFor="schoolStart"></label>
+								<input type="text" id="study" placeholder="School of Study" />
+								<label htmlFor="study"></label>
+								<input type="text" id="schoolStart" placeholder="Start Date" />
+								<label htmlFor="schoolEnd"></label>
+								<input type="text" id="schoolEnd" placeholder="End Date" />
+							</li>
+							<Education education={this.state.education} />
+							<button type="button" onClick={this.addEducation}>
+								Add School
+							</button>
+						</ul>
 					</fieldset>
 					<button type="reset">Reset</button>
 				</form>
