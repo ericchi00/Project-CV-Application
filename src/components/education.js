@@ -3,16 +3,15 @@ import React from 'react';
 class Education extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			item: {
-				text: '',
-			},
-			items: [],
-		};
 	}
+
+	deleteEducation(index) {
+		this.props.deleteEducation(index);
+	}
+
 	render() {
 		const { education } = this.props;
-		return education.map((item, index) => (
+		return education.map((index) => (
 			<li key={index}>
 				<legend>Education</legend>
 				<label htmlFor="school"></label>
@@ -25,7 +24,9 @@ class Education extends React.Component {
 				<input type="text" id="schoolStart" placeholder="Start Date" />
 				<label htmlFor="schoolEnd"></label>
 				<input type="text" id="schoolEnd" placeholder="End Date" />
-				<button type="button">Delete Work</button>
+				<button className='delete' type="button" onClick={this.deleteEducation.bind(this, index)}>
+					Delete
+				</button>
 			</li>
 		));
 	}
