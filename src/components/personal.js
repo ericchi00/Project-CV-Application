@@ -9,12 +9,27 @@ class Personal extends React.Component {
 		return (
 			<div className="personal">
 				<legend>Personal Information</legend>
-				<label htmlFor="name"></label>
-				<input type="text" id="name" placeholder="Full Name" />
-				<label htmlFor="phone"></label>
-				<input type="tel" id="phone" placeholder="Phone Number" />
-				<label htmlFor="email"></label>
-				<input type="email" id="last" placeholder="Email" />
+				<input
+					type="text"
+					id="name"
+					placeholder="Full Name"
+					onChange={this.props.change}
+					name="name"
+				/>
+				<input
+					type="tel"
+					id="phone"
+					placeholder="Phone Number"
+					onChange={this.props.change}
+					name="phone"
+				/>
+				<input
+					type="email"
+					id="last"
+					placeholder="Email"
+					onChange={this.props.change}
+					name="email"
+				/>
 			</div>
 		);
 	}
