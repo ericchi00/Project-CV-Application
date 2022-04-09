@@ -3,6 +3,10 @@ import Education from './components/Education';
 import Personal from './components/Personal';
 import Work from './components/Work';
 import Viewer from './components/Viewer';
+import './styles/app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 class App extends React.Component {
 	constructor(props) {
@@ -10,7 +14,6 @@ class App extends React.Component {
 		this.state = {
 			work: [
 				{
-					id: Date.now(),
 					company: '',
 					title: '',
 					startDate: '',
@@ -20,7 +23,6 @@ class App extends React.Component {
 			],
 			education: [
 				{
-					id: Date.now(),
 					university: '',
 					degree: '',
 					study: '',
@@ -128,45 +130,46 @@ class App extends React.Component {
 		return (
 			<div className="app">
 				<div className="formWrapper">
-					<form onSubmit={this.onSubmit}>
+					<Form>
 						<legend>CV Builder</legend>
 						<fieldset>
 							<Personal change={this.handlePersonal} />
 						</fieldset>
 						<fieldset>
-							<ul>
+							<ul className="list-group">
 								<Work
 									work={this.state.work}
 									deleteWork={this.deleteWork}
 									change={this.handleWork}
 								/>
-								<button
+								<Button
 									className="addWork"
 									type="button"
 									onClick={this.addWork}
+									variant="success"
 								>
 									Add Work
-								</button>
+								</Button>
 							</ul>
 						</fieldset>
 						<fieldset>
-							<ul>
+							<ul className='list-group'>
 								<Education
 									education={this.state.education}
 									deleteEducation={this.deleteEducation}
 									change={this.handleEducation}
 								/>
-								<button
+								<Button
 									className="addSchool"
 									type="button"
 									onClick={this.addEducation}
+									variant="success"
 								>
 									Add School
-								</button>
+								</Button>
 							</ul>
 						</fieldset>
-						<button type="submit">Submit</button>
-					</form>
+					</Form>
 				</div>
 				<Viewer data={this.state} />
 			</div>

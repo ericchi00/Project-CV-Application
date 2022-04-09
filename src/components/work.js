@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 class Work extends React.Component {
 	deleteWork(id) {
@@ -51,13 +52,14 @@ class Work extends React.Component {
 					onChange={(e) => change(e, index)}
 				/>
 				{work.length > 1 && (
-					<button
+					<Button
 						className="delete"
 						type="button"
 						onClick={this.deleteWork.bind(this, item)}
+						variant="danger"
 					>
 						Delete
-					</button>
+					</Button>
 				)}
 			</li>
 		));

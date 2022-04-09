@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 class Education extends React.Component {
 	deleteEducation(index) {
@@ -15,6 +16,7 @@ class Education extends React.Component {
 					type="text"
 					id="school"
 					placeholder="University"
+					name="university"
 					onChange={(e) => change(e, index)}
 				/>
 				<label htmlFor="degree"></label>
@@ -22,6 +24,7 @@ class Education extends React.Component {
 					type="text"
 					id="degree"
 					placeholder="Degree"
+					name="degree"
 					onChange={(e) => change(e, index)}
 				/>
 				<label htmlFor="schoolStart"></label>
@@ -29,6 +32,7 @@ class Education extends React.Component {
 					type="text"
 					id="study"
 					placeholder="School of Study"
+					name="study"
 					onChange={(e) => change(e, index)}
 				/>
 				<label htmlFor="study"></label>
@@ -36,6 +40,7 @@ class Education extends React.Component {
 					type="text"
 					id="schoolStart"
 					placeholder="Start Date"
+					name="startDate"
 					onChange={(e) => change(e, index)}
 				/>
 				<label htmlFor="schoolEnd"></label>
@@ -43,16 +48,18 @@ class Education extends React.Component {
 					type="text"
 					id="schoolEnd"
 					placeholder="End Date"
+					name="endDate"
 					onChange={(e) => change(e, index)}
 				/>
 				{education.length > 1 && (
-					<button
+					<Button
 						className="delete"
 						type="button"
 						onClick={this.deleteEducation.bind(this, item)}
+						variant="danger"
 					>
 						Delete
-					</button>
+					</Button>
 				)}
 			</li>
 		));

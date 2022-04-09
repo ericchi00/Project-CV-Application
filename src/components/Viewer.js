@@ -1,12 +1,10 @@
 import React from 'react';
 import uniqid from 'uniqid';
+import '../styles/viewer.css';
 
 class Viewer extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
-		const { work } = this.props.data;
+		const { work, education } = this.props.data;
 		return (
 			<div className="viewer">
 				<div className="personal">
@@ -30,12 +28,38 @@ class Viewer extends React.Component {
 										</span>
 									</div>
 									<div className="responsibilities">
-										{item.responsibilities}
+										{item.responsibilities ||
+											'Cupidatat sunt anim incididunt nisi labore sunt nulla Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Et deserunt et aliquip voluptate elit cupidatat. Adipisicing enim minim do anim eiusmod est. Irure laboris anim voluptate proident. Cillum reprehenderit est magna minim. Nostrud ex aute laborum ea irure amet ea ipsum ut non minim anim nisi.'}
 									</div>
 								</li>
 							);
 						})}
 					</ul>
+
+					<div className="education">
+						<h3>Education</h3>
+						<ul>
+							{education.map((item) => {
+								return (
+									<li key={uniqid()}>
+										<h4>
+											{`${item.study}` || 'Computer Science'}&nbsp;
+											{item.degree || 'B.S.'}
+										</h4>
+										<div className="schoolHeading">
+											{item.university || 'Harvard University'}&nbsp;
+											<span className="year">
+												{item.startDate || '2028'}|{item.endDate || '2030'}
+											</span>
+										</div>
+										<div className="responsibilities">
+											{item.responsibilities}
+										</div>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
 				</div>
 			</div>
 		);

@@ -1,0 +1,45 @@
+.viewer {
+    width: 50vw;
+    height: max-content;
+    padding: 1.5rem;
+    margin: 0;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+}
+
+ul,
+li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personal {
+    display: flex;
+    flex-direction: row;
+}
+
+.personal ul {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+}
+
+.jobHeading {
+    display: flex;
+    font-size: large;
+}
+
+.year {
+    margin-left: auto;
+}
+
+h3 {
+    border-bottom: 1px black solid;
+}
+
+
+.education .year {
+    margin-left: auto;
+}
