@@ -1,15 +1,15 @@
 {
-  "main.css": "/project-cv-application/static/css/main.783ef9a6.chunk.css",
-  "main.js": "/project-cv-application/static/js/main.fa118045.chunk.js",
-  "main.js.map": "/project-cv-application/static/js/main.fa118045.chunk.js.map",
-  "runtime~main.js": "/project-cv-application/static/js/runtime~main.e154a1c9.js",
-  "runtime~main.js.map": "/project-cv-application/static/js/runtime~main.e154a1c9.js.map",
-  "static/css/2.a8739b98.chunk.css": "/project-cv-application/static/css/2.a8739b98.chunk.css",
-  "static/js/2.635a5868.chunk.js": "/project-cv-application/static/js/2.635a5868.chunk.js",
-  "static/js/2.635a5868.chunk.js.map": "/project-cv-application/static/js/2.635a5868.chunk.js.map",
-  "index.html": "/project-cv-application/index.html",
-  "precache-manifest.476ee145e5ed33267b08fc455b14bdb3.js": "/project-cv-application/precache-manifest.476ee145e5ed33267b08fc455b14bdb3.js",
-  "service-worker.js": "/project-cv-application/service-worker.js",
-  "static/css/2.a8739b98.chunk.css.map": "/project-cv-application/static/css/2.a8739b98.chunk.css.map",
-  "static/css/main.783ef9a6.chunk.css.map": "/project-cv-application/static/css/main.783ef9a6.chunk.css.map"
+  "main.css": "/Project-CV-Application/static/css/main.783ef9a6.chunk.css",
+  "main.js": "/Project-CV-Application/static/js/main.fa118045.chunk.js",
+  "main.js.map": "/Project-CV-Application/static/js/main.fa118045.chunk.js.map",
+  "runtime~main.js": "/Project-CV-Application/static/js/runtime~main.6374c55f.js",
+  "runtime~main.js.map": "/Project-CV-Application/static/js/runtime~main.6374c55f.js.map",
+  "static/css/2.a8739b98.chunk.css": "/Project-CV-Application/static/css/2.a8739b98.chunk.css",
+  "static/js/2.635a5868.chunk.js": "/Project-CV-Application/static/js/2.635a5868.chunk.js",
+  "static/js/2.635a5868.chunk.js.map": "/Project-CV-Application/static/js/2.635a5868.chunk.js.map",
+  "index.html": "/Project-CV-Application/index.html",
+  "precache-manifest.48621b3ff5555441d319ee8a71a0f7da.js": "/Project-CV-Application/precache-manifest.48621b3ff5555441d319ee8a71a0f7da.js",
+  "service-worker.js": "/Project-CV-Application/service-worker.js",
+  "static/css/2.a8739b98.chunk.css.map": "/Project-CV-Application/static/css/2.a8739b98.chunk.css.map",
+  "static/css/main.783ef9a6.chunk.css.map": "/Project-CV-Application/static/css/main.783ef9a6.chunk.css.map"
 }
