@@ -1,7 +1,7 @@
 {
 	"name": "project-cv-application",
 	"version": "0.1.0",
-	"homepage": "http://ericchi00.github.io/project-cv-application",
+	"homepage": "https://ericchi00.github.io/Project-CV-Application/",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.4",
